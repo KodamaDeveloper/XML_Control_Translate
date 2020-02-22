@@ -66,6 +66,7 @@ namespace Kodama_Xml_Control
                 saveFileDialog1.Filter = "All files (*.*)|*.*";
                 saveFileDialog1.FilterIndex = 2;
                 saveFileDialog1.RestoreDirectory = true;
+                saveFileDialog1.FileName = lbl_name_file.Text + "-copy";
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     //textBox1.Text = saveFileDialog1.FileName;
@@ -82,7 +83,7 @@ namespace Kodama_Xml_Control
 
         private void button_translate_Click(object sender, EventArgs e)
         {
-            //textBox_next.Text = textBox_drag.Text;
+            textBox_next.Text = string.Empty;
             //textBox_next.Text = TranslateText("","en","es");
             try
             {
@@ -232,6 +233,11 @@ namespace Kodama_Xml_Control
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

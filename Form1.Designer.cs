@@ -140,7 +140,7 @@
             // 
             // textBox_language_ori
             // 
-            this.textBox_language_ori.Location = new System.Drawing.Point(471, 299);
+            this.textBox_language_ori.Location = new System.Drawing.Point(708, 295);
             this.textBox_language_ori.Name = "textBox_language_ori";
             this.textBox_language_ori.Size = new System.Drawing.Size(50, 20);
             this.textBox_language_ori.TabIndex = 11;
@@ -148,7 +148,7 @@
             // 
             // textBox_language_des
             // 
-            this.textBox_language_des.Location = new System.Drawing.Point(471, 325);
+            this.textBox_language_des.Location = new System.Drawing.Point(708, 321);
             this.textBox_language_des.Name = "textBox_language_des";
             this.textBox_language_des.Size = new System.Drawing.Size(50, 20);
             this.textBox_language_des.TabIndex = 12;
@@ -157,7 +157,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(380, 303);
+            this.label3.Location = new System.Drawing.Point(617, 299);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 13;
@@ -166,7 +166,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(351, 328);
+            this.label4.Location = new System.Drawing.Point(588, 324);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(114, 13);
             this.label4.TabIndex = 14;
