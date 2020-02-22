@@ -39,6 +39,10 @@
             this.textBox_tag = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_ignore_txt = new System.Windows.Forms.TextBox();
+            this.textBox_language_ori = new System.Windows.Forms.TextBox();
+            this.textBox_language_des = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_name_file
@@ -55,7 +59,7 @@
             // 
             this.textBox_drag.AllowDrop = true;
             this.textBox_drag.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.textBox_drag.Location = new System.Drawing.Point(12, 25);
+            this.textBox_drag.Location = new System.Drawing.Point(12, 35);
             this.textBox_drag.Multiline = true;
             this.textBox_drag.Name = "textBox_drag";
             this.textBox_drag.Size = new System.Drawing.Size(428, 255);
@@ -67,7 +71,7 @@
             // 
             // button_translate
             // 
-            this.button_translate.Location = new System.Drawing.Point(365, 294);
+            this.button_translate.Location = new System.Drawing.Point(797, 294);
             this.button_translate.Name = "button_translate";
             this.button_translate.Size = new System.Drawing.Size(75, 23);
             this.button_translate.TabIndex = 2;
@@ -82,7 +86,7 @@
             // 
             // textBox_next
             // 
-            this.textBox_next.Location = new System.Drawing.Point(446, 25);
+            this.textBox_next.Location = new System.Drawing.Point(446, 35);
             this.textBox_next.Multiline = true;
             this.textBox_next.Name = "textBox_next";
             this.textBox_next.Size = new System.Drawing.Size(428, 255);
@@ -90,7 +94,7 @@
             // 
             // button_save_file
             // 
-            this.button_save_file.Location = new System.Drawing.Point(799, 299);
+            this.button_save_file.Location = new System.Drawing.Point(797, 322);
             this.button_save_file.Name = "button_save_file";
             this.button_save_file.Size = new System.Drawing.Size(75, 23);
             this.button_save_file.TabIndex = 5;
@@ -111,7 +115,7 @@
             // 
             this.textBox_tag.Location = new System.Drawing.Point(138, 296);
             this.textBox_tag.Name = "textBox_tag";
-            this.textBox_tag.Size = new System.Drawing.Size(207, 20);
+            this.textBox_tag.Size = new System.Drawing.Size(170, 20);
             this.textBox_tag.TabIndex = 7;
             this.textBox_tag.Text = "<value>";
             this.textBox_tag.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -119,26 +123,64 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 327);
+            this.label2.Location = new System.Drawing.Point(13, 330);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Code to ignore";
+            this.label2.Text = "Code to ignore:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox_ignore_txt
             // 
-            this.textBox_ignore_txt.Location = new System.Drawing.Point(104, 327);
+            this.textBox_ignore_txt.Location = new System.Drawing.Point(138, 325);
             this.textBox_ignore_txt.Name = "textBox_ignore_txt";
             this.textBox_ignore_txt.Size = new System.Drawing.Size(41, 20);
             this.textBox_ignore_txt.TabIndex = 10;
             this.textBox_ignore_txt.Text = "&jks;";
             // 
+            // textBox_language_ori
+            // 
+            this.textBox_language_ori.Location = new System.Drawing.Point(471, 299);
+            this.textBox_language_ori.Name = "textBox_language_ori";
+            this.textBox_language_ori.Size = new System.Drawing.Size(50, 20);
+            this.textBox_language_ori.TabIndex = 11;
+            this.textBox_language_ori.Text = "en";
+            // 
+            // textBox_language_des
+            // 
+            this.textBox_language_des.Location = new System.Drawing.Point(471, 325);
+            this.textBox_language_des.Name = "textBox_language_des";
+            this.textBox_language_des.Size = new System.Drawing.Size(50, 20);
+            this.textBox_language_des.TabIndex = 12;
+            this.textBox_language_des.Text = "es";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(380, 303);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Language Origin:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(351, 328);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Language Destination:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 359);
+            this.ClientSize = new System.Drawing.Size(884, 352);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox_language_des);
+            this.Controls.Add(this.textBox_language_ori);
             this.Controls.Add(this.textBox_ignore_txt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_tag);
@@ -151,7 +193,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "XML_Control_Translate";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +211,10 @@
         private System.Windows.Forms.TextBox textBox_tag;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_ignore_txt;
+        private System.Windows.Forms.TextBox textBox_language_ori;
+        private System.Windows.Forms.TextBox textBox_language_des;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 

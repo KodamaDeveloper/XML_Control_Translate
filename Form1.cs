@@ -87,7 +87,7 @@ namespace Kodama_Xml_Control
             try
             {
                 TextBox dragdrop = textBox_next;
-                ReadFileLineToTranslate(files_dragdrop, dragdrop, "en", "es");
+                ReadFileLineToTranslate(files_dragdrop, dragdrop, textBox_language_ori.Text.Trim(), textBox_language_des.Text.Trim());
             }
             catch
             {
@@ -113,19 +113,38 @@ namespace Kodama_Xml_Control
                     {
                         string textNotTag = line.Replace(tag_start, "");
                         textNotTag = textNotTag.Replace(tag_finish, "");
-                        if (textNotTag.Contains(symbol_1))
+                        //symbol1
+                        if (textNotTag.Contains(symbol_1) && textBox_ignore_txt.Text.Trim() != "" && textBox_ignore_txt.Text != null)
                         {
+                            string firtsTXt = textNotTag;
                             textNotTag = textNotTag.Replace(symbol_1, "123456789123456789123456789");
-                            textNotTag = TranslateText(textNotTag, language_ori, language_dest);
-                            string final_txt = textNotTag.Replace("123456789123456789123456789", symbol_1);
-                            dragdrop.Text += tag_start + final_txt + tag_finish + "\r\n";
+
+                            if (textNotTag.Contains("&")) {
+                               // textNotTag = TranslateText(textNotTag, language_ori, language_dest);
+                                dragdrop.Text += tag_start + firtsTXt + tag_finish + "\r\n";
+                            }
+                            else {
+                                textNotTag = TranslateText(textNotTag, language_ori, language_dest);
+                                string final_txt = textNotTag.Replace("123456789123456789123456789", symbol_1);
+                                dragdrop.Text += tag_start + final_txt + tag_finish + "\r\n";
+                            }
+
                         }
                         else
                         {
-                            //print el text translated
-                            textNotTag = TranslateText(textNotTag, language_ori, language_dest);
-                            dragdrop.Text += tag_start + textNotTag + tag_finish + "\r\n";
+                            if (textNotTag.Contains("&"))
+                            {
+                                dragdrop.Text += tag_start + textNotTag + tag_finish + "\r\n";
+                            }
+                            else {
+                                textNotTag = TranslateText(textNotTag, language_ori, language_dest);
+                                dragdrop.Text += tag_start + textNotTag + tag_finish + "\r\n";
+                            }
+                                //print el text translated
+                                
+                           
                         }
+                        //symbols
 
                     }
                     else
