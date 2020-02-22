@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kodama_Xml_Control", "Kodama_Xml_Control.csproj", "{50912ABF-8E20-4FB1-B695-9AFB7E8ACDDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50912ABF-8E20-4FB1-B695-9AFB7E8ACDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50912ABF-8E20-4FB1-B695-9AFB7E8ACDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50912ABF-8E20-4FB1-B695-9AFB7E8ACDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50912ABF-8E20-4FB1-B695-9AFB7E8ACDDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2F91643-0FC6-46F3-A915-F61218BEC5ED}
+	EndGlobalSection
+EndGlobal
