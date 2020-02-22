@@ -62,6 +62,7 @@
             this.textBox_drag.Location = new System.Drawing.Point(12, 35);
             this.textBox_drag.Multiline = true;
             this.textBox_drag.Name = "textBox_drag";
+            this.textBox_drag.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox_drag.Size = new System.Drawing.Size(428, 255);
             this.textBox_drag.TabIndex = 1;
             this.textBox_drag.TabStop = false;
@@ -89,6 +90,7 @@
             this.textBox_next.Location = new System.Drawing.Point(446, 35);
             this.textBox_next.Multiline = true;
             this.textBox_next.Name = "textBox_next";
+            this.textBox_next.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.textBox_next.Size = new System.Drawing.Size(428, 255);
             this.textBox_next.TabIndex = 4;
             // 
@@ -191,6 +193,7 @@
             this.Controls.Add(this.textBox_drag);
             this.Controls.Add(this.lbl_name_file);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "XML_Control_Translate";
