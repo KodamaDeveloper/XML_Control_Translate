@@ -35,6 +35,9 @@ namespace Kodama_Xml_Control
             files_dragdrop = (string[])e.Data.GetData(DataFormats.FileDrop, false);
             lbl_name_file.Text = files_dragdrop[0];
             TextBox dragdrop = textBox_drag;
+            label_count_error.Text = "0";
+            label_count_translated.Text = "0";
+            label_count_not_tag.Text = "0";
             ReadFileLine(files_dragdrop, dragdrop);
         }
         private void ReadFileLine(string[] files_dragdrop, TextBox dragdrop)
@@ -123,11 +126,13 @@ namespace Kodama_Xml_Control
                             if (textNotTag.Contains("&")) {
                                // textNotTag = TranslateText(textNotTag, language_ori, language_dest);
                                 dragdrop.Text += tag_start + firtsTXt + tag_finish + "\r\n";
+                                label_count_error.Text = (Convert.ToInt32(label_count_error.Text) +  1).ToString();
                             }
                             else {
                                 textNotTag = TranslateText(textNotTag, language_ori, language_dest);
                                 string final_txt = textNotTag.Replace("123456789123456789123456789", symbol_1);
                                 dragdrop.Text += tag_start + final_txt + tag_finish + "\r\n";
+                                label_count_translated.Text = (Convert.ToInt32(label_count_translated.Text) + 1).ToString(); ;
                             }
 
                         }
@@ -136,10 +141,12 @@ namespace Kodama_Xml_Control
                             if (textNotTag.Contains("&"))
                             {
                                 dragdrop.Text += tag_start + textNotTag + tag_finish + "\r\n";
+                                label_count_error.Text = (Convert.ToInt32(label_count_error.Text) + 1).ToString(); ;
                             }
                             else {
                                 textNotTag = TranslateText(textNotTag, language_ori, language_dest);
                                 dragdrop.Text += tag_start + textNotTag + tag_finish + "\r\n";
+                                label_count_translated.Text = (Convert.ToInt32(label_count_translated.Text) + 1).ToString(); ;
                             }
                                 //print el text translated
                                 
@@ -151,6 +158,7 @@ namespace Kodama_Xml_Control
                     else
                     {
                         dragdrop.Text += line + "\r\n";
+                        label_count_not_tag.Text = (Convert.ToInt32(label_count_not_tag.Text) + 1).ToString(); ;
                     }
 
                 }
