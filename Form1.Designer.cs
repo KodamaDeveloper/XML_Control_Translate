@@ -49,6 +49,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label_count_not_tag = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label_count_totalline = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_name_file
@@ -183,7 +186,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(384, 303);
+            this.label5.Location = new System.Drawing.Point(350, 303);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 15;
@@ -192,7 +195,7 @@
             // label_count_error
             // 
             this.label_count_error.AutoSize = true;
-            this.label_count_error.Location = new System.Drawing.Point(422, 304);
+            this.label_count_error.Location = new System.Drawing.Point(388, 304);
             this.label_count_error.Name = "label_count_error";
             this.label_count_error.Size = new System.Drawing.Size(13, 13);
             this.label_count_error.TabIndex = 16;
@@ -201,7 +204,7 @@
             // label_count_translated
             // 
             this.label_count_translated.AutoSize = true;
-            this.label_count_translated.Location = new System.Drawing.Point(422, 325);
+            this.label_count_translated.Location = new System.Drawing.Point(388, 325);
             this.label_count_translated.Name = "label_count_translated";
             this.label_count_translated.Size = new System.Drawing.Size(13, 13);
             this.label_count_translated.TabIndex = 18;
@@ -210,7 +213,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(356, 324);
+            this.label7.Location = new System.Drawing.Point(322, 324);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 13);
             this.label7.TabIndex = 17;
@@ -219,7 +222,7 @@
             // label_count_not_tag
             // 
             this.label_count_not_tag.AutoSize = true;
-            this.label_count_not_tag.Location = new System.Drawing.Point(535, 304);
+            this.label_count_not_tag.Location = new System.Drawing.Point(518, 304);
             this.label_count_not_tag.Name = "label_count_not_tag";
             this.label_count_not_tag.Size = new System.Drawing.Size(13, 13);
             this.label_count_not_tag.TabIndex = 20;
@@ -228,17 +231,48 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(480, 304);
+            this.label9.Location = new System.Drawing.Point(463, 304);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 19;
             this.label9.Text = "Not Tag:";
+            // 
+            // label_count_totalline
+            // 
+            this.label_count_totalline.AutoSize = true;
+            this.label_count_totalline.Location = new System.Drawing.Point(518, 324);
+            this.label_count_totalline.Name = "label_count_totalline";
+            this.label_count_totalline.Size = new System.Drawing.Size(13, 13);
+            this.label_count_totalline.TabIndex = 22;
+            this.label_count_totalline.Text = "0";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(455, 324);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Total Line:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(852, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(22, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "R";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 352);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label_count_totalline);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label_count_not_tag);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label_count_translated);
@@ -290,6 +324,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label_count_not_tag;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label_count_totalline;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
     }
 }
 
